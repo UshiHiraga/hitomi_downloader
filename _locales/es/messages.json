@@ -27,7 +27,7 @@
     },
 	"label_descargar_con_pdfmake":{
 		"description": "Le informa al usuario que el check selecciona a PDFMake para generar PDF.",
-		"message": "Generar archivo con PDFMake: "
+		"message": "Generar archivo con PDFMake (No recomendado): "
 	},
 	"label_descargar_automaticamente": {
 		"description": "Le informa al usuario que el check hace que la extensión descargue doujins automáticamente.",

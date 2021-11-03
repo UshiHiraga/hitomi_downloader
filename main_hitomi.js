@@ -38,11 +38,10 @@ function Main(){
     op_bu.setAttribute("id", "options_button_opener");
     op_bu.innerText = chrome.i18n.getMessage("mensaje_opciones_descarga");
     op_bu.addEventListener("click", function(){
-        document.getElementById("opciones_descarga").showModal()
+        document.getElementById("opciones_descarga").showModal();
     });
     padre = document.querySelector(".gallery h2");
     padre.appendChild(op_bu);
-
 };
 
 function CreateCheckItem(id, label_text){
@@ -235,7 +234,7 @@ function Download_PDF_Make_Generate(data, ancho_page){
                 width: ancho_page,
             });
 
-            pdfMake.createPdf(doc_definition).download(BIG_ID + "_" + TITLE, function(){
+            pdfMake.createPdf(doc_definition).download(BIG_ID + "_" + TITLE + ".pdf", function(){
                 big_div.innerText = chrome.i18n.getMessage("info_trabajo_finalizado");
             });
 
