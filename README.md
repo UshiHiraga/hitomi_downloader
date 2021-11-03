@@ -10,7 +10,7 @@ Si tenés a Edge Chromium como tu navegador prinicipal, puedes obtenerla directa
 [Ir a la tienda de extensiones.](https://microsoftedge.microsoft.com/addons/detail/ebjnnjhkbpnffbbincdgefnlnfkkabob)
 
 ### Como extensión de terceros.
-Consiga el archivo CRX, luego siga las instrucciones para instalar una extensión de terceros en vuestro navegador.
+Consiga el archivo CRX en [Releases](https://github.com/UshiHiraga/hitomi_downloader/releases/tag/extension), luego siga las instrucciones para instalar una extensión de terceros en vuestro navegador.
 
   1. Dirígete a chrome://extensions/ (Vuestro navegador te redirigirá a la página de administración de extensiones).
   2. Activa el modo desarrollador.
