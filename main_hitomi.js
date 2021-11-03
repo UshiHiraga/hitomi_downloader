@@ -3,9 +3,6 @@ function Main(){
     if(!localStorage.getItem("get_with_pdfmaker")){
         localStorage.setItem("get_with_pdfmaker", "1");
     }
-    if(!localStorage.getItem("automatic_download_doujin")){
-        localStorage.setItem("automatic_download_doujin", "1");
-    };
 
     // Hacemos el request al archivo de gallery, para agilizar el proceso.
     let code = location.href.match(/[0-9]*.html/g);
@@ -35,7 +32,6 @@ function Main(){
     // Añadimos el contenido de las opciones, en este caso, solo son checks.
     let padre = document.querySelector("#opciones_descarga .contenidoDialog");
     padre.appendChild(CreateCheckItem("get_with_pdfmaker", chrome.i18n.getMessage("label_descargar_con_pdfmake")));
-    padre.appendChild(CreateCheckItem("automatic_download_doujin", chrome.i18n.getMessage("label_descargar_automaticamente")));
 
     // Creamos el botón de las opciones.
     let op_bu = document.createElement("button");
@@ -47,7 +43,6 @@ function Main(){
     padre = document.querySelector(".gallery h2");
     padre.appendChild(op_bu);
 
-    if(localStorage.getItem("automatic_download_doujin") == true){button.click()}
 };
 
 function CreateCheckItem(id, label_text){
@@ -101,10 +96,6 @@ function ChangedValue(e){
     switch (e.target.id){
         case "get_with_pdfmaker":
             localStorage.setItem("get_with_pdfmaker", +new_value);
-        break;
-
-        case "automatic_download_doujin":
-            localStorage.setItem("automatic_download_doujin", +new_value);
         break;
 
         default:

@@ -1,3 +1,7 @@
+:root {
+    --background-light: rgba(255, 255, 255, 1);
+}
+
 // Botón de descarga en hitomi
 #new_download_boton{ 
     &.descargando{
@@ -55,55 +59,90 @@ center, hr {
     }
 }
 
+
 .d {
-    margin: 20% auto;
-    max-height: 50vh;
-    width: 30%;
+    width: 40%;
+    max-height: 100vh;
+    margin: auto;
+    padding: 10px;
     border: none;
-    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &::-webkit-scrollbar{
+        display: none;
+    };
+
+    &.super{
+        // Si el diálogo cuelga desde arriba.
+        margin-top: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        padding-bottom: 0px;
+    };
+
+    &.suber{
+        // Si el diálogo aparece desde abajo.
+        margin-bottom: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding-top: 0px;
+    };
+
     &::backdrop{
         background-color: rgba(0, 0, 0, 0.8);
-    }
+    };
 
     .titleDialog{
         display: flex;
-        background-color: none;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
+        background-color: none;
+        // font-size: 26px;
+        line-height: 1;
 
         .titleText{
-            font-size: 22px;
-            padding: 0px 5px;
+            height: 100%;
+            vertical-align: middle;
             font-weight: bold;
             background-color: rgba(255, 255, 255, 1);
             margin-right: auto;
-        }
+            border: none;
+        };
 
         button{
             margin: 0px 2px;
+            border: none;
             background-color: rgba(255, 255, 255, 1);
             outline: none;
-            border-color: rgba(0, 0, 0, 0);
-            // border: none;
-            font-size: 20px;
-            cursor: pointer;
 
             &:first-child{
                 margin-left: 0px;
-            }
+            };
             
             &:last-child{
                 margin-right: 0px;
-            }
-        }
-    }
+            };
+        };
+    };
 
     .contenidoDialog{
+        max-height: 90vh;
         background-color: rgba(255, 255, 255, 1);
-        padding: 5px;
         overflow-y: auto;
-    }
-}
+        &::-webkit-scrollbar{
+            display: none;
+        };
+    };
+};
+
+
 
 .images_body{
     margin: 0;

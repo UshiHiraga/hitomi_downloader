@@ -1,7 +1,7 @@
 {
   "name": "__MSG_titulo_extension__",
   "description": "__MSG_description_extension__",
-  "version": "1.1.1",
+  "version": "1.0.1",
   "manifest_version": 3,
   "default_locale": "es", 
   "host_permissions": ["https://hitomi.la/*"],
