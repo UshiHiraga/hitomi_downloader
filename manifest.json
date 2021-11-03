@@ -20,7 +20,7 @@
   },
   "content_scripts": [{
     "matches": ["https://hitomi.la/*"],
-    "js": ["main_hitomi.js", "pdfmake.min.js"],
+    "js": ["main_hitomi.js", "pdfmake.min.js", "hash_url_creator.js"],
     "css": ["css/main_hitomi.css"]
   }]
 }

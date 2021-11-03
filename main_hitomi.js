@@ -14,7 +14,7 @@ function Main(){
     .then(function(t){
         script = t.replace("var galleryinfo = ", "");
         sessionStorage.setItem("code" + code, script);
-        console.log("Hemos guardado el script.");
+        console.log("Hemos guardado el script gallery.");
     })
     .catch(function(e){
         console.error(e);
@@ -180,53 +180,6 @@ function Download_PDF_Make_Generate(data, ancho_page){
             final_image: chrome.i18n.getMessage("imagen_final_data")
         }
     };
-
-
-    function BigCreateURLHitomi(datos_imagen_actual){
-        // Convierte el hash de la imagen en una url.
-        let carpeta_ruta;
-        if(datos_imagen_actual.hash.length < 3){
-            carpeta_ruta = datos_imagen_actual.hash;
-        } else {
-            let big_hash = datos_imagen_actual.hash;
-            carpeta_ruta = big_hash.replace(/^.*(..)(.)$/, "$2/$1/"+ big_hash);
-        }
-    
-        let extension = datos_imagen_actual.name.split('.').pop();
-        let mid_url = 'https://a.hitomi.la/images/'+ carpeta_ruta +'.'+extension;
-        let base;
-    
-        function subdomain_from_url(url, base) {
-            var retval = 'b';
-            if (base) {
-                retval = base;
-            }
-
-            var b = 16;
-            var r = /\/[0-9a-f]\/([0-9a-f]{2})\//;
-            var m = r.exec(url);
-            if (!m) {
-                return 'a';
-            }
-            
-            var g = parseInt(m[1], b);
-            if (!isNaN(g)) {
-                    var o = 0;
-                    if (g < 0x88) {
-                            o = 1;
-                    }
-                    if (g < 0x44) {
-                            o = 2;
-                    }
-                    retval = String.fromCharCode(97 + o) + retval;
-            }
-            
-            return retval;
-        }
-    
-        let t_url = mid_url.replace(/\/\/..?\.hitomi\.la\//, '//'+subdomain_from_url(mid_url, base)+'.hitomi.la/');
-        return t_url
-    }
 
     // Primero insertamos el div donde se muestra la información.
     let big_div = document.createElement("div");
