@@ -2,6 +2,8 @@
 
 Esta es una extensión diseñada para los navegadores basados en Chromium (Ejemplo: Edge y Chrome) que te permitirá obtener doujins de [Hitomi](https://hitomi.la) directamente en PDF.
 
+## Esta extensión ya no está funcionando. Perdón.
+
 ## Instalación
 Tenés dos manera de conseguir la extensión:
 
